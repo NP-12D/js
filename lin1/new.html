@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contimg{
+            width: 100px;
+            height: 100px;
+        }
+        .contimg:hover{
+            transform: scale(1.1);
+            border-radius: 10px;
+        }
+        .big{
+           max-width: 1000px;
+           max-height: 700px;
+            margin:20px;
+
+        }
+        .container{
+            display: flex;
+            gap:40px;
+            flex-wrap: wrap;
+        }
+        .display{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box{
+        background-color:rgb(66, 40, 91);
+        height: 100px;
+        width: 100px;
+        list-style-type: none;
+        }
+    button:hover {
+      background-color: gray;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+      transform: scale(1.1);
+     }
+   
+
+        .parent{
+            display: flex;
+            gap:20px;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 10px;
+        }
+       button{
+        padding: 12px;
+        border-radius: 10px;
+        width: 60px;
+        color:white;
+        background-color: black;
+        
+       }
+
+    </style>
+</head>
+
+<body>
+    <h1 id="h1">JS</h1>
+    
+    <br>
+    <label for="bu"></label>
+    <button id="bu">
+
+      click!
+
+    </button>
+    <br>
+    <hr>
+
+    <div >
+        <ul class="parent">
+            <li class="box"></li>
+        </ul>
+       
+    </div>
+    <br>
+<button class="add">
+ add
+</button>
+<hr>
+<div class="display">
+    <img  class="big" src="imges/e54bdc6d10af5f574b5f35b4e29f72ba.jpg"> 
+</div>
+
+<div id="container">
+    <img class="contimg" src="imges/3b64d108cf6c1f1d977996ae15ddc7b3.png">
+    <img class="contimg" src="imges/4ps2bjwew4g71.webp">
+    <img class="contimg" src="imges/6a42b465a91dc629aa3af0d07e3f5b9e.jpg">
+    <img class="contimg" src="imges/6ZMO4c.jpg">
+    <img class="contimg" src="imges/82-826408_wallpaper-wheel-tire-mercedes-benz-g63-mercedes-g63.jpg">
+    <img class="contimg" src="imges/83d2e412b80af542608e6396d7f94fe7.jpg">
+    <img class="contimg" src="imges/310-3102222_wallpaper-wheel-tire-mercedes-benz-g63-mercedes-mercedes.jpg">
+    <img class="contimg" src="imges/1613397.webp">
+    <img class="contimg" src="imges/adv1_mercedes_benz_s63_amg-HD.jpg">
+    <img class="contimg" src="imges/2398947.jpg">
+    <img class="contimg" src="imges/adv1_mercedes_benz_s63_amg-HD.jpg">
+    <img class="contimg" src="imges/e54bdc6d10af5f574b5f35b4e29f72ba.jpg"> 
+    <img class="contimg" src="imges/HD-wallpaper-mercedes-amg-gt-2018-mercedes-benz-cars-amg-2018-cars.jpg"> 
+    <img class="contimg" src="imges/HD-wallpaper-mercedes-g63-amg-araba-arabalar-car-cars-g-class-g65-suv.jpg"> 
+    <img class="contimg" src="imges/mercedes-benz-amg-g63-black-suv-cars-5184x3456-wallpx.com.jpg"> 
+    <img class="contimg" src="imges/OIP.jpg"> 
+    <img class="contimg" src="imges/photo-1624085568108-36410cfe4d24.jpeg"> 
+    <img class="contimg" src="imges/thumb-1920-960768.jpg"> 
+    <img class="contimg" src="imges/tumblr_43785b5cecda3cd7b046580a65090f84_823a1325_540.jpg"> 
+    <img class="contimg"  src="imges/Used-2017-Mercedes-Benz-GLE43-AMG-AWD-SUV-LOADED-WITH-FACTORY-OPTIONS.jpg"> 
+    <img class="contimg"  src="imges/c63-amg-wallpaper-preview.jpg">
+    <img class="contimg"  src="imges/car-mercedes-benz-mercedes-amg-mercedes-amg-gt-wallpaper-preview.jpg">
+    <img class="contimg"  src="imges/HD-wallpaper-mercedes-amg-gt-2018-mercedes-benz-cars-amg-2018-cars.jpg">
+    <img class="contimg"  src="imges/HD-wallpaper-mercedes-g63-amg-araba-arabalar-car-cars-g-class-g65-suv.jpg">
+    <img class="contimg"  src="imges/mercedes-benz-amg-g63-black-suv-cars-5184x3456-wallpx.com.jpg">
+    <img class="contimg"  src="imges/mercedes-benz-amg-gt-s-2016-wallpaper-preview.jpg">
+    <img class="contimg" src="imges/tumblr_43785b5cecda3cd7b046580a65090f84_823a1325_540.jpg"> 
+    <img class="contimg"  src="imges/Used-2017-Mercedes-Benz-GLE43-AMG-AWD-SUV-LOADED-WITH-FACTORY-OPTIONS.jpg"> 
+    <img class="contimg"  src="imges/c63-amg-wallpaper-preview.jpg">
+    <img class="contimg"  src="imges/car-mercedes-benz-mercedes-amg-mercedes-amg-gt-wallpaper-preview.jpg">
+
+</div>
+
+<script>
+ let clicked=false;
+    document.getElementById("bu").addEventListener("click", function (){
+        clicked = !clicked;
+        if(clicked){
+            document.getElementById("h1").textContent="HTML CSS";
+            document.getElementById("h1").style.color="green";
+        }
+        else{
+            document.getElementById("h1").textContent="JAVASCRIPT";
+            document.getElementById("h1").style.color="red";
+        }
+       
+        document.getElementById("h1").style.fontSize="50px";
+        
+     
+    });
+    document.querySelector(".add").addEventListener("click", function(){
+        let newli= document.createElement("li");
+        newli.className="box";
+        document.querySelector(".parent").appendChild(newli);
+        
+    })
+    document.querySelectorAll(".contimg").forEach( img=> { img.addEventListener("click", function(){
+        document.querySelector(".big").src=this.src;
+    });
+});
+
+
+</script>
+</body>
+</html>
