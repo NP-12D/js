@@ -152,7 +152,22 @@
         document.querySelector(".big").src=this.src;
     });
 });
+// Listen for keyboard events
+document.addEventListener("keydown", function(event) {
+    if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+        // Move forward to the next image (loop if at end)
+        currentIndex = (currentIndex + 1) % images.length;
+    } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+        // Move backward to the previous image (loop if at start)
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+    }
+    updateImage(); // Update displayed image
+});
 
+// Initialize first image
+updateImage();
+
+    
 
 </script>
 </body>
