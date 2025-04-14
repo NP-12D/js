@@ -152,6 +152,15 @@
         document.querySelector(".big").src=this.src;
     });
 });
+
+    const images = document.querySelectorAll(".contimg"); // Select all images
+const bigImage = document.querySelector(".big"); // Main display image
+let currentIndex = 0; // Track current image
+
+// Function to update displayed image
+function updateImage() {
+    bigImage.src = images[currentIndex].src;
+}
 // Listen for keyboard events
 document.addEventListener("keydown", function(event) {
     if (event.key === "ArrowRight" || event.key === "ArrowDown") {
