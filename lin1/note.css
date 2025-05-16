@@ -3,10 +3,21 @@ button{
     background-color: black;
     border: none;
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     background-color: black;
-    max-width: 1997px;
+    width: 1997px;
+    overflow-x: hidden;
+    align-content: center;
 }
+html{display: flex;
+align-items: center;
+justify-content: center;
+background-color: white;}
 .note{
     background-color: black;
 border: none;
@@ -14,21 +25,35 @@ border: none;
     width: 100%;
     margin-top: 10px;
     height: fit-content;
+    color: yellow;
    
+}
+a{
+    color:inherit;
+    text-decoration: none;
+    
 }
 .header{
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 50px;
+    padding: 10px;
     align-items: center;
     border-bottom: 1px solid white;
 }
 .note_body{
-    max-width:50%;
+    width:99%;
     
 
 }
 .note-body form{
     width: 100%;
+}
+.light{
+    background-color: white;
+    color: black;
+}
+.borderbpttom{
+    border-bottom: 1px solid black;
 }
