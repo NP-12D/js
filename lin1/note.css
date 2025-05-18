@@ -12,12 +12,14 @@ body{
     background-color: black;
     width: 1997px;
     overflow-x: hidden;
-    align-content: center;
+   justify-content: center;
+    height: 100svh;
+  
 }
 html{display: flex;
 align-items: center;
 justify-content: center;
-background-color: white;}
+background-color:white;}
 .note{
     background-color: black;
 border: none;
