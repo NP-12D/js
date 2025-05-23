@@ -22,10 +22,11 @@ justify-content: center;
 background-color:white;}
 .note{
     background-color: black;
-border: none;
+    border: none;
     color: white;
-    width: 100%;
+    width: 98%;
     margin-top: 10px;
+    margin-left: 10px;
     height: fit-content;
     color: yellow;
    
