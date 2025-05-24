@@ -1,0 +1,28 @@
+body{
+    width: 1900px;
+    max-width: 1900px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+    height: 100svh;
+    padding: 20px;
+    margin: 0;
+}
+html{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.img{
+    height: 400px;
+    width: 300px;
+}
+
+.back{
+    width: 100%;
+    height: fit-content;
+}

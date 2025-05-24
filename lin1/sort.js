@@ -78,7 +78,8 @@ function addClickEvents() {
                             <img class="img" src="${selectedProduct.image}"><a href="sort2.html?id=${selectedProduct.id}">
                             <h2>${selectedProduct.name}</h2>
                             <p>Price: ${selectedProduct.price}$</p>
-                            <p>Category: ${selectedProduct.category}</p></a>
+                            <p>Category: ${selectedProduct.category}</p>
+                            <p class="color">click for more</p></a>
                             <button class="x">x</button>
                         `
                         item1.style.display = "flex";

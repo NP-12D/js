@@ -9,11 +9,19 @@ fetch("info.json")
         if (curent) {
             let div = document.querySelector(".fullpage");
             div.innerHTML = `
+           <div class="back" >
+
                 <img class="img" src="${curent.image}">
+                </div>
                 <h2>${curent.name}</h2>
                 <p>Price: ${curent.price}$</p>
                 <p>Category: ${curent.category}</p>
-                <button class="x">x</button>`
+                <button class="historyback">back</button>
+                `
         }
+        document.querySelector(".historyback").addEventListener("click",function(){
+            history.back();
+        })
     })
     .catch(error => console.error("Error fetching JSON:", error));
+
