@@ -4,6 +4,26 @@ fetch('info.json')
         show(data);
         color2(data);
         addClickEvents();
+      document.querySelector("#sortSelect").addEventListener("change", function(){
+       let conteiner = document.querySelector(".shop");
+       conteiner.innerHTML="";
+       let selectedvalue=this.value;
+       let sortcon;
+       if(selectedvalue=="priceAsc"){
+sortcon=[...data].sort((a,b)=>a.price-b.price);
+       }
+       else if(selectedvalue=="priceDesc"){
+        sortcon=[...data].sort((a,b)=>b.price-a.price);
+       }
+       else if(selectedvalue=="nameAsc"){
+        sortcon=[...data].sort((a,b)=>a.name.toLowerCase().localeCompare(b.name.toLowerCase()))
+       }                                                                                                                                
+       else if(selectedvalue=="nameDesc"){
+        sortcon=[...data].sort((a,b)=>b.name.toLowerCase().localeCompare(a.name.toLowerCase()))
+       }                                                                                                                                
+show(sortcon);
+ 
+      });
     });
 
 let conteiner = document.querySelector(".shop");
