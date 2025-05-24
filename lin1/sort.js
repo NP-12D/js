@@ -55,7 +55,7 @@ function addClickEvents() {
                         let hiddenContainer = document.querySelector(".hidden_con"); // ✅ Fixed selection
 
                         item1.innerHTML = `
-                            <img class="img" src="${selectedProduct.image}"><a href="sor+t2.html?id=${selectedProduct.id}">
+                            <img class="img" src="${selectedProduct.image}"><a href="sort2.html?id=${selectedProduct.id}">
                             <h2>${selectedProduct.name}</h2>
                             <p>Price: ${selectedProduct.price}$</p>
                             <p>Category: ${selectedProduct.category}</p></a>
