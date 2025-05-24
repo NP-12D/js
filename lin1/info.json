@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "name": "Faded-Effect Polo Shirt",
+        "price": 55.00,
+        "image": "./images/shirt3.jpg",
+        "category": "t-shirt"
+    },
+    {
+        "id": 2,
+        "name": "Lengo style retro",
+        "price": 155.00,
+        "image": "./images/shirt4.jpg",
+        "category": "t-shirt"
+    },
+    {
+        "id": 3,
+        "name": "Nike Kids Revolution",
+        "price": 22.90,
+        "image": "./images/shoe3.jpg",
+        "category": "shoes"
+    },
+    {
+        "id": 4,
+        "name": "Embroidered T-Shirt",
+        "price": 45.00,
+        "image": "./images/shirt1.jpg",
+        "category": "t-shirt"
+    },
+    {
+        "id": 5,
+        "name": "Skinny Fit Jeans",
+        "price": 65.00,
+        "image": "./images/jeans4.jpg",
+        "category": "jeans"
+    },
+    {
+        "id": 6,
+        "name": "Retro red shoe",
+        "price": 19.90,
+        "image": "./images/shoe2.jpg",
+        "category": "shoes"
+    },
+    {
+        "id": 7,
+        "name": "Stitch Disney Wide-Leg",
+        "price": 119.00,
+        "image": "./images/jeans3.jpg",
+        "category": "jeans"
+    },
+    {
+        "id": 8,
+        "name": "Wide-Leg Jeans",
+        "price": 89.00,
+        "image": "./images/jeans2.jpg",
+        "category": "jeans"
+    },
+    {
+        "id": 9,
+        "name": "New Balance Kids",
+        "price": 22.90,
+        "image": "./images/shoe4.jpg",
+        "category": "shoes"
+    },
+    {
+        "id": 10,
+        "name": "Marine Jeans",
+        "price": 79.00,
+        "image": "./images/jeans1.jpg",
+        "category": "jeans"
+    },
+    {
+        "id": 11,
+        "name": "T-Shirt with Embroidered",
+        "price": 85.00,
+        "image": "./images/shirt2.jpg",
+        "category": "t-shirt"
+    },
+    {
+        "id": 12,
+        "name": "Retro training",
+        "price": 99.90,
+        "image": "./images/shoe1.jpg",
+        "category": "shoes"
+    }
+]
