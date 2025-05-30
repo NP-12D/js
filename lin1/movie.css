@@ -1,0 +1,116 @@
+body{
+    max-width: 1900px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.episode{
+    color:#555;
+}
+.year{
+    color:#555;
+}
+.html{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.div{
+     width: 300px;
+
+    padding: 8px;
+    border: 1px solid #ddd;
+        background-color: #f9f9f9;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:5px;
+   
+    height:550px;
+    overflow: hidden;
+
+}
+.bigbutton{
+    width:90%;
+    color:white;
+    background-color: #007BFF;
+    border-radius: 5px;
+    border: none;
+    font-size: 0.9em;
+    padding: 8px 16px;
+}
+.img{
+    width:100%;
+    height:100%;
+}.img_con{
+width: 100%;
+height:80%;
+overflow: hidden;
+}
+.title{
+    font-size: 20px;
+    text-align: center;
+}
+.movie{
+    display :flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:10px;
+    flex-direction: row;
+    flex:1;
+}
+
+
+.hiddenmoviecon{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    background-color: rgba(94, 94, 94,0.8);
+}
+.hiddenmovie{
+    width:420px;
+    height: 500px;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   background-color: #686464;
+   padding: 20px;
+   border-radius: 10px;
+   position: relative;
+}
+
+
+
+.hiddenmovie p{
+    color:white;
+}
+
+.hiddenmovie h2{
+    color:white;
+}
+
+ .hiddenmovie .x{
+    position: absolute;
+    top:10px;
+    right:10px;
+    background-color: transparent;
+    font-size: 24px;
+    border: none;
+    color:white;
+
+}

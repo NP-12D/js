@@ -58,10 +58,3 @@ document.querySelector(".gt55").addEventListener("click", function(){
 //       })
 //   
 //})
-function num(){
-    window.addEventListener("load", function (){
-        let x=0;
-        this.alert(x++);
-        if
-    })
-}

@@ -3,6 +3,7 @@ fetch('info.json')
     .then(data => {
         show(data);
         color2(data);
+      
         addClickEvents();
       document.querySelector("#sortSelect").addEventListener("change", function(){
        let conteiner = document.querySelector(".shop");
@@ -37,14 +38,16 @@ function show(prodact) {
                 <h2 class="name">${elem.name}</h2>
                 <p class="price" data-info="${parseFloat(elem.price)}">${elem.price}$</p>
                 <p class="category">${elem.category}</p>
-                <img class="icon" src="./images/cart.png">
+            
             </div>
+                <img class="icon" src="./images/cart.png">
         `;
         conteiner.appendChild(item);
     
     });
     color2();
         addClickEvents();
+        addToCart() ;
     
 }
 
@@ -79,6 +82,7 @@ function addClickEvents() {
                             <h2>${selectedProduct.name}</h2>
                             <p>Price: ${selectedProduct.price}$</p>
                             <p>Category: ${selectedProduct.category}</p>
+                            
                             <p class="color">click for more</p></a>
                             <button class="x">x</button>
                         `
@@ -100,3 +104,15 @@ function addClickEvents() {
     });
 }
                 
+function addToCart() {
+    document.querySelectorAll(".shop>div").forEach(div => {
+        div.querySelector(".icon").addEventListener("click", function() {
+           let item = JSON.parse(localStorage.getItem("item")) || []; 
+           item.unshift(div.innerHTML)
+          
+           localStorage.setItem("item",JSON.stringify(item));
+           alert("item added to cart");
+        });
+    });
+}
+
