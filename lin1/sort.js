@@ -108,11 +108,17 @@ function addToCart() {
     document.querySelectorAll(".shop>div").forEach(div => {
         div.querySelector(".icon").addEventListener("click", function() {
            let item = JSON.parse(localStorage.getItem("item")) || []; 
-           item.unshift(div.innerHTML)
-          
-           localStorage.setItem("item",JSON.stringify(item));
-           alert("item added to cart");
+
+           if (!Array.isArray(item)) {
+               item = []; // Ensure it's an array
+           }
+
+           item.unshift(div.innerHTML);
+           localStorage.setItem("item", JSON.stringify(item));
+     
+           console.log(localStorage.getItem("item"));
         });
     });
 }
+
 

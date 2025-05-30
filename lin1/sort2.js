@@ -16,7 +16,7 @@ fetch("info.json")
                 <h2>${curent.name}</h2>
                 <p>Price: ${curent.price}$</p>
                 <p>Category: ${curent.category}</p>
-                 <p >${selectedProduct.description}</p>
+                 <p >${curent.description}</p>
                 <button class="historyback">back</button>
                 `
         }

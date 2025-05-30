@@ -4,6 +4,7 @@ fetch("https://koleji.coding-world.com/mvs/movies.php")
 
 show(data);
 hiddenepisod();
+ gridviwe()
 
 
 })
@@ -12,12 +13,15 @@ data.forEach(element => {
   let conteiner=  document.querySelector(".movie");
  let div= document.createElement("div");
  div.innerHTML=`
+ <div class="img_text">
  <div class="img_con">
  <a href="movie2.html?id=${element.id}"><img class="img"src="${element.image}"></a>
  </div>
+ <div class="text">
  <h2 class="title">${element.title}</h2>
  <p class="episode"> Episode : ${element.episode}</p>
  <p class="year"> ${element.year} - ${element.duration}</p>
+ </div></div>
  <button class="bigbutton" data-index=${element.id}> Details </button>
 
  `
@@ -30,6 +34,7 @@ data.forEach(element => {
 
 });
 hiddenepisod();
+ gridviwe()
 }
 function hiddenepisod(){
  let title =document.querySelectorAll(".div");
@@ -73,7 +78,38 @@ document.querySelector(".x").addEventListener("click",function(){
 })})
 
 }
+function gridviwe(){
 
+document.querySelector(".grid2").addEventListener("click",function(){
+  document.querySelectorAll(".div").forEach(div=>{
+div.style.cssText = "width:80%; height:80px;flex-direction: row; justify-content: space-between";
+div.parentElement.cssText = `display :flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    flex-direction: column;
+    `;
+  })
+  document.querySelectorAll(".img").forEach(img=>{
+    img.style.cssText = "width:80px; height:80px;";
+})
+  document.querySelectorAll(".img_con").forEach(img=>{
+    img.style.cssText = "width:80px; height:80px;";
+})
+  document.querySelectorAll(".bigbutton").forEach(img=>{
+    img.style.cssText = "width:fit-content; height:50px; ";
+})
+  document.querySelectorAll(".text").forEach(img=>{
+    img.style.cssText = "width:fit-content; height:80px; ";
+})
+  document.querySelectorAll(".img_text").forEach(img=>{
+    img.style.cssText = " flex-direction: row;";
+})
+
+})}
+
+document.querySelector(".grid1").addEventListener("click",function(){window.location.reload()})
 
 
 

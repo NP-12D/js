@@ -11,6 +11,28 @@ body{
     padding:0;
     box-sizing: border-box;
 }
+.img_text{
+    display: flex;
+    gap:15px;
+    flex-direction: column;
+}
+.grid1{
+    width: 40px;
+    height: 40px;
+   
+}
+.grid2{
+    width: 40px;
+    height: 40px;
+   
+}
+header{
+ display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap:15px;
+    margin: 10px 0px;
+}
 .episode{
     color:#555;
 }
@@ -68,6 +90,12 @@ overflow: hidden;
     gap:10px;
     flex-direction: row;
     flex:1;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    align-items:start;
 }
 
 
