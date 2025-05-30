@@ -18,10 +18,16 @@ function displayCart() {
         });
         document.querySelectorAll(".items>div").forEach
         (
-            div=>
+            (div)=>
                  { div.querySelector("button.x").addEventListener("click", 
                     function(){ div.remove(); 
-                        alert("oppa"); })
+                        let only=div.querySelector(".only");
+                        let cart = JSON.parse(localStorage.getItem("item")) || []; // Retrieve saved items
+                                    let itemId = only.dataset.index; 
+                        cart.splice(itemId,1);
+                        alert("oppa"); 
+                        localStorage.setItem("item",JSON.stringify(cart));
+                    })
                  })
     }
     displayCart();
