@@ -44,3 +44,6 @@ button{
     width:400px;
     justify-content: space-between;
 }
+.choices button{
+    text-align: center;
+}
