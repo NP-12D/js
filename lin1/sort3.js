@@ -1,6 +1,3 @@
-
-
-
 function displayCart() {
         let cart = JSON.parse(localStorage.getItem("item")) || []; // Retrieve saved items
         let cartContainer = document.querySelector(".items");
@@ -12,9 +9,15 @@ function displayCart() {
 
         cart.forEach(itemHTML => {
             let itemDiv = document.createElement("div");
-            itemHTML += `<button class="x">X</button>`
+            itemHTML += `<button class="x">X</button>
+           <div class="cuntity">
+            <button class="plus">+</button>
+            <p class="num">1</p>
+            <button class="minus">-</button></div>`
             itemDiv.innerHTML = itemHTML; // Insert the full saved div
             cartContainer.appendChild(itemDiv);
+
+            
 
   document.querySelectorAll(".icon").forEach(icon=>
       {
@@ -22,7 +25,7 @@ function displayCart() {
      }
      )
 
-
+function removitem(){
                  document.querySelectorAll(".items>div").forEach
         (
             (div,index)=>
@@ -34,15 +37,24 @@ function displayCart() {
                         cart.splice(index,1);
                        
                         localStorage.setItem("item",JSON.stringify(cart));
-       sum()
+       
 
-  
+      sum()
 
                     })
+                 
                  })
+               }
+                 removitem();
         });
-   
+    
+       
+    
+    
     }
+
+
+
     displayCart();
 
 document.querySelector(".clear").addEventListener("click", function(){
@@ -55,11 +67,42 @@ function sum(){
                  let sum = 0;
 document.querySelectorAll(".items>div").forEach(div => {
     let price = div.querySelector(".price");
-    if (price) {
-        sum += parseFloat(price.textContent);
-    }
+    let count = div.querySelector(".num");
+ 
+        if (price && count) {
+            let priceValue = parseFloat(price.textContent);
+            let countValue = parseFloat(count.textContent); // Ensure it's an integer
+            sum += priceValue * countValue; // Multiply price by quantity
+        }
+        document.querySelector(".sum").textContent = sum;
 });
 
-document.querySelector(".sum").innerHTML = `${sum}`;
+
 }
 sum()
+
+
+document.querySelectorAll(".cuntity").forEach(container => {
+    let numElement = container.querySelector(".num");
+
+    container.querySelector(".plus").addEventListener("click", () => {
+        let value = parseFloat(numElement.textContent);
+        numElement.textContent = value + 1;
+        sum();
+    });
+
+    container.querySelector(".minus").addEventListener("click", () => {
+        let value = parseFloat(numElement.textContent);
+         numElement.textContent = value - 1;
+        if (value > 1) {
+            numElement.textContent = value - 1;
+             sum();
+        }
+       
+       
+         
+ else if(value==0){
+    removitem();}
+       
+    });
+});

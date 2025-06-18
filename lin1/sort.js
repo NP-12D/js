@@ -105,20 +105,20 @@ function addClickEvents() {
 }
                 
 function addToCart() {
-    document.querySelectorAll(".shop>div").forEach(div => {
-        div.querySelector(".icon").addEventListener("click", function() {
-           let item = JSON.parse(localStorage.getItem("item")) || []; 
+ document.querySelectorAll(".shop>div").forEach(div => {
+     div.querySelector(".icon").addEventListener("click", function() {
+        let item = JSON.parse(localStorage.getItem("item")) || []; 
+        if (!Array.isArray(item)) {
+            item = []; // Ensure it's an array
+        }
+        item.unshift(div.innerHTML);
+        localStorage.setItem("item", JSON.stringify(item));
+  
+        console.log(localStorage.getItem("item"));
 
-           if (!Array.isArray(item)) {
-               item = []; // Ensure it's an array
-           }
+     });
+ });
 
-           item.unshift(div.innerHTML);
-           localStorage.setItem("item", JSON.stringify(item));
-     
-           console.log(localStorage.getItem("item"));
-        });
-    });
+
+
 }
-
-
